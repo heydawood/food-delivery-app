@@ -22,3 +22,21 @@
 .add-product-name input, .add-product-desc textarea{
     padding: 10px;
 }
+
+.add-category-price{
+    display: flex;
+    gap: 30px;
+}
+.add-category-price select, .add-category-price input{
+    max-width: 120px;
+    padding: 10px;
+}
+
+.add-button{
+    max-width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: #262626;
+    color: wheat;
+    cursor: pointer;
+}
