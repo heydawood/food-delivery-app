@@ -28,9 +28,9 @@ const Cart = () => {
                 <div className="cart-items-title cart-items-item">
                   <img src={url+'/images/'+item.image} alt="item image" />
                   <p>{item.name}</p>
-                  <p>Rs {item.price}</p>
+                  <p>$ {item.price}</p>
                   <p>{cartItems[item._id]}</p>
-                  <p>Rs {item.price * cartItems[item._id]}</p>
+                  <p>$ {item.price * cartItems[item._id]}</p>
                   <p onClick={() => removeFromCart(item._id)} className="cross">x</p>
                 </div>
                 <hr />
@@ -46,18 +46,18 @@ const Cart = () => {
 
             <div className="cart-total-details">
               <p>Subtotal</p>
-              <p>Rs {getTotal()}</p>
+              <p>$ {getTotal()}</p>
             </div>
             <hr />
 
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>Rs {getTotal() === 0 ? 0 : 50}</p>
+              <p>$ {getTotal() === 0 ? 0 : 2}</p>
             </div>
               <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>Rs {getTotal() === 0 ? 0 : getTotal()+50}</b>
+              <b>$ {getTotal() === 0 ? 0 : getTotal()+2}</b>
             </div>
           </div>
           <button onClick={()=>navigate('/order')}>PROCEED TO CHECKOUT</button>

@@ -9,7 +9,7 @@ const Navbar = ({ setShowLogin }) => {
 
   const { getTotal, token, setToken } = useContext(StoreContext);
 
-  const navigate = useNavigate
+  const navigate = useNavigate()
 
   const logout = () =>{
     localStorage.removeItem('token')
@@ -69,7 +69,7 @@ const Navbar = ({ setShowLogin }) => {
             <img src={assets.profile_icon} alt="profile" />
 
             <ul className="nav-profile-dropdown"  >
-              <li><img src={assets.bag_icon} alt="cart" /><p>Orders</p></li>
+              <li onClick={()=>navigate('/myorders')}><img src={assets.bag_icon} alt="cart" /><p>Orders</p></li>
               <hr />
               <li onClick={logout}><img src={assets.logout_icon} alt="cart" /><p>Logout</p></li>
             </ul>
